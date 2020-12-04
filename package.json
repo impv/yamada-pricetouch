@@ -25,6 +25,7 @@
     "build:html": "nunjucks '**/*.html' -p ./src/html/ -o ./build",
     "build:scss": "sass ./src/scss/style.scss ./build/css/style.css",
     "build:js": "browserify ./src/js/index.js -o ./build/js/script.js",
+    "build:static": "cp -p -r ./src/static/ ./build",
     "watch:html": "nunjucks '**/*.html' -p ./src/html/ -o ./build -w",
     "watch:scss": "sass --watch ./src/scss/style.scss ./build/css/style.css",
     "watch:js": "watchify ./src/js/index.js -o ./build/js/script.js",
