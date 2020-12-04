@@ -8,8 +8,8 @@ html{
     font-size: 62.5%;
 }
 body{
-    color: black;
-    background-color: white;
+    color: $color_black;
+    background-color: $color_white;
     font-family: $font_family;
     -webkit-font-smoothing: antialiased;
     line-height: 1.8;
@@ -25,4 +25,7 @@ img{
 .num{
     font-family: $font_num;
     font-weight: 800;
+}
+.bold{
+    font-weight:bold;
 }
