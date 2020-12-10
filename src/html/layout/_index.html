@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "../component/_head.html" %}
+</head>
+<body>
+    <div class="container">
+
+        {% include "../component/_navbar.html" %}
+        
+        {% block body %}{% endblock %}
+
+        {% include "../component/_navbar.html" %}
+    </div>
+</body>
+</html>
