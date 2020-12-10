@@ -1,0 +1,19 @@
+.toast{
+    background-color: $color_white;
+    border: 2px solid $color_green;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    font-weight: 600;
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    position: fixed;
+    top: calc(100vh - 95px);
+    left: 20px;
+    right: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(120px);
+    &.is-show{
+        transform: translateY(0);
+    }
+}

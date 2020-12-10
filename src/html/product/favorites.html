@@ -43,4 +43,17 @@
     </section>
 </main>
 
+<script>
+    window.onload = function() {
+        // toastの表示・非表示
+        const addClass = function() {
+            document.getElementById("toast").classList.add("is-show");
+        }
+        const removeClass = function() {
+            document.getElementById("toast").classList.remove("is-show");
+        }
+        setTimeout(addClass, 500);
+        setTimeout(removeClass, 2500);
+    }
+</script>
 {% endblock %}
