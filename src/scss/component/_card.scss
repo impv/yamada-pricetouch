@@ -1,0 +1,79 @@
+.card{
+    background-color: $color_white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-stock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 72px;
+    .stock-status{
+        display: none;
+    }
+    &.is-default{
+        .stock-status.default{
+            display: block;
+        }
+    }
+    &.is-few{
+        .stock-status.few{
+            display: block;
+        }
+    }
+    &.is-empty{
+        .stock-status.empty{
+            display: block;
+        }
+    }
+    dt{
+        font-weight: 600;
+    }
+    dd{
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: center;
+        &.few{
+            &:before{
+                content: "";
+                display: block;
+                width: 30px;
+                height: 30px;
+                background: no-repeat center url("../img/icon-stock-few.svg");
+                background-size: contain;
+                margin: 0 auto 6px;
+            }
+        }
+    }
+    .num{
+        font-size: 3rem;
+        color: $color_green;
+    }
+}
+
+.card-review{
+    &--row{
+        min-width: 80%;
+        width: 80%;
+    }
+    &--column{
+        width: 100%;
+    }
+  &__head{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+  }  
+  &__date{
+      font-size: 1.2rem;
+      color: $color_gray;
+  }
+  &__desc{
+      margin: 10px 0;
+  }
+}

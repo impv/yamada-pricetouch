@@ -6,6 +6,7 @@
     padding: 0;
     appearance: none;
     text-decoration: none;
+    display: inline-block;
 }
 .btn-cancel{
     color: #7B7C7E;
@@ -15,4 +16,74 @@
     width: auto;
     font-size: 1.6rem;
     font-weight: bold;
+}
+
+.btn-menu{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0;
+    border-radius: 10px;
+    width: calc((100% - 30px) / 4);
+    .text{
+        margin-top: 6px;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+    &--w{
+        background-color: $color_white;
+        color: $color_blue;
+    }
+    &--b{
+        background-color: $color_blue;
+        color: $color_white;
+    }
+}
+
+.btn-back{
+    color: $color_blue;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    &:before{
+        content: "";
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background: no-repeat center url("../img/icon-arrow-left.svg");
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    span{
+        display: block;
+        height: 21px;
+        margin-left: 21px;
+    }
+}
+
+.btn-link{
+    color: $color_blue;
+    font-weight: 600;
+}
+
+.btn-link-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    .btn-viewall{
+        margin-top: 6px;
+    }
+    .btn-remove{
+        margin-top: 20px;
+    }
 }

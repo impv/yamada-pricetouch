@@ -1,0 +1,102 @@
+.img-modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+    &.is-show{
+        opacity: 1;
+        visibility: visible
+    }
+    .modal-close{
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+        background: no-repeat center url("../img/icon-close.svg");
+        background-size: contain;
+    }
+    .list-img{
+        margin: 80px 40px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.half-modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100vh;
+    bottom: 0;
+    background-color: $color_lightgray;
+    height: calc(100vh - 88px);
+    width: 100%;
+    overflow-y: scroll;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.15);
+    border-radius: 30px 30px 0 0;
+    z-index: 1;
+    transition: all 0.15s ease-in-out;
+    &.is-show{
+        top: 88px;
+    }
+    .modal-inner{
+        position: relative;
+    }
+    .modal-head{
+        position: fixed;
+        width: 100%;
+        top: auto;
+        left: 0;
+        right: 0;
+        background-color: $color_lightgray;
+        box-shadow: 0 20px 8px 0 $color_lightgray;
+    }
+    .close-half-modal {
+        width: 100%;
+        padding-top: 20px ;
+        cursor: pointer;
+        &:after{
+            height: 18px;
+            width: 50px;
+            display: block;
+            margin: auto;
+            content:"";
+            background: no-repeat center url("../img/icon-arrow-down.svg");
+            background-size: contain;
+        }
+    }
+    .modal-main{
+        padding: 60px 20px 20px;
+    }
+}
+.overray{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.8);
+    height: 100vh;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+    &.is-show{
+        visibility: visible;
+        opacity: 1;
+    }
+}

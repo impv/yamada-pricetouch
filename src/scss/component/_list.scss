@@ -1,0 +1,45 @@
+.list-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-card-row{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: unset;
+    margin: 0 -20px;
+    .card{
+        position: relative;
+        margin-left: 20px;
+        &:after{
+            content: "";
+            width: 20px;
+            height: 1px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+    }
+}
+
+.list-card-column{
+    display: flex;
+    flex-direction: column;
+    .card:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+}
+
+.list-product-detail{
+    li{
+        margin-top: 14px;
+        &:before{
+            content: "●";
+        }
+    }
+}
