@@ -1,6 +1,13 @@
-{% extends "./layout/_layout.html" %}
+{% extends "./layout/_index.html" %}
 
 {% block body %}
-    <p>ここにコンテンツが入る</p>
-    <p><span class="num">123</span></p>
+<main class="main">
+    <ul>
+        <li><a class="btn btn-link" href="/scan">スキャン</a></li>
+        <li><a class="btn btn-link" href="/product">商品情報</a></li>
+        <li><a class="btn btn-link" href="/product/detail">商品スペック</a></li>
+        <li><a class="btn btn-link" href="/product/review">商品のクチコミ</a></li>
+        <li><a class="btn btn-link" href="/product/favorites">お気に入り商品</a></li>
+    </ul>
+</main>
 {% endblock %}
