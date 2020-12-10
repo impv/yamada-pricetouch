@@ -38,6 +38,12 @@
     .score-num{
         font-size: 4rem;
     }
+    .review-total-comment{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
 }
 
 .review-stars{

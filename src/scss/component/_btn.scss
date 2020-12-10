@@ -75,15 +75,9 @@
     font-weight: 600;
 }
 
-.btn-link-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    .btn-viewall{
-        margin-top: 6px;
-    }
-    .btn-remove{
-        margin-top: 20px;
-    }
+.btn-remove{
+    margin-top: 16px;
+}
+.btn-viewall{
+    margin-top: 6px;
 }

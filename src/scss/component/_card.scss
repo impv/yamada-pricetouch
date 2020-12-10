@@ -54,6 +54,17 @@
     }
 }
 
+.card-favorit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    a{
+        color: $color_black;
+        text-decoration: none;
+    }
+}
+
 .card-review{
     &--row{
         min-width: 80%;
