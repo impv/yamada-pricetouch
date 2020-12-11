@@ -11,24 +11,6 @@
     align-items: center;
     padding: 0 20px;
     height: 72px;
-    .stock-status{
-        display: none;
-    }
-    &.is-default{
-        .stock-status.default{
-            display: block;
-        }
-    }
-    &.is-few{
-        .stock-status.few{
-            display: block;
-        }
-    }
-    &.is-empty{
-        .stock-status.empty{
-            display: block;
-        }
-    }
     dt{
         font-weight: 600;
     }
@@ -46,6 +28,9 @@
                 background-size: contain;
                 margin: 0 auto 6px;
             }
+        }
+        &.empty{
+            color: $color_red;
         }
     }
     .num{
