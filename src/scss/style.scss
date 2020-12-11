@@ -7,8 +7,16 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/base";
+
 // ------------------------------------
 // component
 // ------------------------------------
 @import "component/scan";
+@import "component/product";
+
+@import "component/modal";
 @import "component/btn";
+@import "component/card";
+@import "component/list";
+@import "component/table";
+@import "component/toast";

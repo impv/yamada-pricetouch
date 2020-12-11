@@ -3,6 +3,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
+    background-color: $color_white;
     .is-ready{
         opacity: 1;
         transition: opacity 0.2s;

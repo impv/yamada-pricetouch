@@ -1,0 +1,15 @@
+.table-product{
+    th,td{
+        border: 1px solid $color_gray;
+        padding: 10px;
+    }
+    th{
+        background-color: $color_lightgray;
+        width: 100px;
+        font-weight: 500;
+    }
+    td{
+        background-color: transparent;
+        width: calc(100% - 100px);
+    }
+}
