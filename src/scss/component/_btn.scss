@@ -29,20 +29,42 @@
     padding: 14px 0;
     border-radius: 10px;
     width: calc((100% - 30px) / 4);
-    .text{
-        margin-top: 6px;
-    }
-    .icon{
+    background-color: $color_white;
+    color: $color_blue;
+    &:before{
+        content: "";
+        display: inline-block;
         width: 20px;
         height: 20px;
+        background-size: contain;
+        margin-bottom: 6px;
     }
-    &--w{
-        background-color: $color_white;
-        color: $color_blue;
+    &--favorite{
+        &:before{
+            background: no-repeat center url("../img/icon-heart.svg");
+        }
     }
-    &--b{
-        background-color: $color_blue;
-        color: $color_white;
+    &--detail{
+        &:before{
+            background: no-repeat center url("../img/icon-sheet.svg");
+        }
+    }
+    &--maker{
+        &:before{
+            background: no-repeat center url("../img/icon-browse.svg");
+        }
+    }
+    &--webcom{
+        &:before{
+            background: no-repeat center url("../img/icon-cart.svg");
+        }
+        &.empty{
+            background-color: $color_red;
+            color: $color_white;
+            &:before{
+                background: no-repeat center url("../img/icon-cart-w.svg");
+            }
+        }
     }
 }
 
