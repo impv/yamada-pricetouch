@@ -63,6 +63,10 @@
             background-image: url(../img/icon-star-line.svg);
             background-size: cover;
         }
+        &.inactive{
+            background-image: url(../img/icon-star-inactive.svg);
+            background-size: cover;
+        }
     }
     &--total{ 
         .star{
