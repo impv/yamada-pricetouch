@@ -18,17 +18,6 @@
         font-weight: 400;
         font-size: 1.2rem;
         text-align: center;
-        &.few{
-            &:before{
-                content: "";
-                display: block;
-                width: 30px;
-                height: 30px;
-                background: no-repeat center url("../img/icon-stock-few.svg");
-                background-size: contain;
-                margin: 0 auto 6px;
-            }
-        }
         &.empty{
             color: $color_red;
         }
