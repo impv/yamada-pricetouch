@@ -55,12 +55,10 @@
         display: block;
         width: 22px;
         height: 22px;
+        background-image: url(../img/icon-star-line.svg);
+        background-size: cover;
         &.fill{
             background-image: url(../img/icon-star-fill.svg);
-            background-size: cover;
-        }
-        &.line{
-            background-image: url(../img/icon-star-line.svg);
             background-size: cover;
         }
         &.inactive{

@@ -29,12 +29,12 @@
     <h1 class="page-title">商品のクチコミ</h1>
     <div class="review-total">
         <div class="score">
-            <ul class="review-stars review-stars--total">
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star line"></li>
+            <ul class="review-stars review-stars--total" id="reviewTotal" data-score="92.5">
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
             </ul>
             <div class="num"><span class="score-num ">92.5</span>/100</div>
         </div>
@@ -43,23 +43,6 @@
             <a class="btn btn-link btn-viewall" href="../product/review">すべてを表示</a>
         </div>
     </div>
-    <!-- ↓↓レビューが無い場合↓↓ -->
-    <!-- <div class="review-total">
-        <div class="score">
-            <ul class="review-stars review-stars--total">
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-            </ul>
-            <div class="num"><span class="score-num ">--</span>/100</div>
-        </div>
-        <div class="review-total-comment">
-            <p>0件のクチコミ</p>
-            <a class="btn btn-link btn-viewall" href="../product/review">すべてを表示</a>
-        </div>
-    </div> -->
     
     <ul class="list-card-row">
         <li class="card card-review card-review--row">
@@ -69,7 +52,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star line"></li>
+                    <li class="star"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -83,7 +66,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star line"></li>
+                    <li class="star"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -97,7 +80,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star line"></li>
+                    <li class="star"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -112,3 +95,46 @@
         </li>
     </ul> -->
 </section>
+
+<script>
+    const reviewTotal = document.getElementById("reviewTotal")
+
+    // li.starにClassを追加
+    function addStarClass(list,className,num){
+        for( let i in list){
+            if( list.hasOwnProperty(i) ) {
+                if( i == num ) break;
+                list[i].classList.add(className);
+            }
+        }
+    }
+    
+    function getStarScore(element){
+        const score = Math.round(element.dataset.score);
+        const stars = element.children;
+        console.log(score);
+        if( score == 0){
+            // score = 0
+            addStarClass(stars,'fill',0)
+        }else if( score >= 1 && score <= 20){
+            // score = 1-20
+            addStarClass(stars,'fill',1)
+        }else if( score >= 21 && score <= 40){
+            // score = 21-40
+            addStarClass(stars,'fill',2)
+        }else if( score >= 41 && score <= 60){
+            // score = 41-60
+            addStarClass(stars,'fill',3)
+        }else if( score >= 61 && score <= 80){
+            // score = 61-80
+            addStarClass(stars,'fill',4)
+        }else if( score >= 81 && score <= 100){
+            // score = 81-100
+            addStarClass(stars,'fill',5)
+        }else{
+            addStarClass(stars,'inactive',5)
+        }
+    }
+    
+    getStarScore(reviewTotal);
+</script>
