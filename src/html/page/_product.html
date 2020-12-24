@@ -98,8 +98,7 @@
 
 <script>
     var stars = document.querySelectorAll(".review-stars--total .star");
-    var score = document.querySelector("#reviewTotal").dataset.score
-    console.log(score);
+    var score = document.querySelector("#reviewTotal").dataset.score;
     for(var i = 0; i < stars.length; i++){
         if(score){
             if (!(score / 100 * 5 < i + 1)) {
