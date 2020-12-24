@@ -52,7 +52,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star"></li>
+                    <li class="star line"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -66,7 +66,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star"></li>
+                    <li class="star line"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -80,7 +80,7 @@
                     <li class="star fill"></li>
                     <li class="star fill"></li>
                     <li class="star fill"></li>
-                    <li class="star"></li>
+                    <li class="star line"></li>
                 </ul>
                 <div class="card-review__date">2020/12/10に投稿</div>
             </div>
@@ -101,11 +101,11 @@
     var score = document.querySelector("#reviewTotal").dataset.score;
     for(var i = 0; i < stars.length; i++){
         if(score){
-            if (!(score / 100 * 5 < i + 1)) {
+            if (score / 100 * 5 < i + 1) {
+                stars[i].classList.add("line")
+            }else{
                 stars[i].classList.add("fill")
             }
-        }else{
-            stars[i].classList.add("inactive")
         }
     }
 </script>
