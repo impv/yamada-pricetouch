@@ -29,12 +29,12 @@
     <h1 class="page-title">商品のクチコミ</h1>
     <div class="review-total">
         <div class="score">
-            <ul class="review-stars review-stars--total">
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star fill"></li>
-                <li class="star line"></li>
+            <ul class="review-stars review-stars--total" id="reviewTotal" data-score="95.5">
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
             </ul>
             <div class="num"><span class="score-num ">92.5</span>/100</div>
         </div>
@@ -43,23 +43,6 @@
             <a class="btn btn-link btn-viewall" href="../product/review">すべてを表示</a>
         </div>
     </div>
-    <!-- ↓↓レビューが無い場合↓↓ -->
-    <!-- <div class="review-total">
-        <div class="score">
-            <ul class="review-stars review-stars--total">
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-                <li class="star inactive"></li>
-            </ul>
-            <div class="num"><span class="score-num ">--</span>/100</div>
-        </div>
-        <div class="review-total-comment">
-            <p>0件のクチコミ</p>
-            <a class="btn btn-link btn-viewall" href="../product/review">すべてを表示</a>
-        </div>
-    </div> -->
     
     <ul class="list-card-row">
         <li class="card card-review card-review--row">
@@ -112,3 +95,17 @@
         </li>
     </ul> -->
 </section>
+
+<script>
+    var stars = document.querySelectorAll(".review-stars--total .star");
+    var score = document.querySelector("#reviewTotal").dataset.score;
+    for(var i = 0; i < stars.length; i++){
+        if(score){
+            if (score / 100 * 5 < i + 1) {
+                stars[i].classList.add("line")
+            }else{
+                stars[i].classList.add("fill")
+            }
+        }
+    }
+</script>

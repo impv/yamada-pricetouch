@@ -16,14 +16,14 @@
         <h1 class="page-title">商品のクチコミ</h1>
         <div class="review-total">
             <div class="score">
-                <ul class="review-stars review-stars--total">
-                    <li class="star fill"></li>
-                    <li class="star fill"></li>
-                    <li class="star fill"></li>
-                    <li class="star fill"></li>
-                    <li class="star line"></li>
+                <ul class="review-stars review-stars--total" id="reviewTotal" data-score="72.5">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                 </ul>
-                <div class="num"><span class="score-num">92.5</span>/100</div>
+                <div class="num"><span class="score-num">72.5</span>/100</div>
             </div>
             <div><p>735件のクチコミ</p></div>
         </div>
@@ -73,5 +73,18 @@
         </ul>
     </section>
 </main>
-    
+
+<script>
+    var stars = document.querySelectorAll(".review-stars--total .star");
+    var score = document.querySelector("#reviewTotal").dataset.score;
+    for(var i = 0; i < stars.length; i++){
+        if(score){
+            if (score / 100 * 5 < i + 1) {
+                stars[i].classList.add("line")
+            }else{
+                stars[i].classList.add("fill")
+            }
+        }
+    }
+</script>
 {% endblock %}
