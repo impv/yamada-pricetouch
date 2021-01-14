@@ -103,3 +103,22 @@
 .btn-viewall{
     margin-top: 6px;
 }
+
+.button {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: $color_blue;
+    border: 1px solid $color_blue;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+}
+
+.button:active {
+    background: lighten($color_blue, 10%);
+}
+
+.more {
+    margin-top: 40px;
+}
