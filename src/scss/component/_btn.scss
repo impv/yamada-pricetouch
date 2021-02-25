@@ -29,9 +29,8 @@
     padding: 14px 0;
     border-radius: 10px;
     width: calc((100% - 30px) / 4);
-    background-color: $color_white;
-    color: $color_blue;
-    border: 1px solid #c4c4c4;
+    background: linear-gradient(180deg, #2997FF 0%, #1D85E8 100%);
+    color: $color_text;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow ease 0.2s;
     &:hover,
@@ -48,22 +47,22 @@
     }
     &--favorite{
         &:before{
-            background: no-repeat center url("../img/icon-heart.svg");
+            background: no-repeat center url("../img/icon-heart-w.svg");
         }
     }
     &--detail{
         &:before{
-            background: no-repeat center url("../img/icon-sheet.svg");
+            background: no-repeat center url("../img/icon-sheet-w.svg");
         }
     }
     &--maker{
         &:before{
-            background: no-repeat center url("../img/icon-browse.svg");
+            background: no-repeat center url("../img/icon-browse-w.svg");
         }
     }
     &--webcom{
         &:before{
-            background: no-repeat center url("../img/icon-cart.svg");
+            background: no-repeat center url("../img/icon-cart-w.svg");
         }
         &.empty{
             background-color: $color_red;
@@ -76,7 +75,7 @@
 }
 
 .btn-back{
-    color: $color_blue;
+    color: $color_text;
     font-size: 1.4rem;
     font-weight: 600;
     display: inline-block;
@@ -86,7 +85,7 @@
         display: inline-block;
         width: 21px;
         height: 21px;
-        background: no-repeat center url("../img/icon-arrow-left.svg");
+        background: no-repeat center url("../img/icon-arrow-left-w.svg");
         background-size: contain;
         position: absolute;
         left: 0;
@@ -100,7 +99,7 @@
 }
 
 .btn-link{
-    color: $color_blue;
+    color: $color_text;
     font-weight: 600;
 }
 
@@ -116,8 +115,8 @@
     display: block;
     width: 100%;
     color: #fff;
-    background: $color_blue;
-    border: 1px solid $color_blue;
+    background: linear-gradient(180deg, #2997FF 0%, #1D85E8 100%);
+    border: none;
     border-radius: 8px;
     padding: 1rem 3rem;
 }

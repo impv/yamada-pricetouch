@@ -42,7 +42,7 @@
     right: 0;
     top: 100vh;
     bottom: 0;
-    background-color: $color_lightgray;
+    background-color: $color_background;
     height: calc(100vh - 88px);
     width: 100%;
     overflow-y: scroll;
@@ -62,8 +62,9 @@
         top: auto;
         left: 0;
         right: 0;
-        background-color: $color_lightgray;
-        box-shadow: 0 20px 8px 0 $color_lightgray;
+        border-radius: 30px 30px 0 0;
+        background-color: $color_background;
+        box-shadow: 0 20px 8px 0 $color_background;
     }
     .close-half-modal {
         width: 100%;

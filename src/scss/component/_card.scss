@@ -3,6 +3,11 @@
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #c4c4c4;
+    color: $color_text_black;
+
+    .btn-link {
+        color: $color_text_blue;
+    }
 }
 
 .card-stock{
