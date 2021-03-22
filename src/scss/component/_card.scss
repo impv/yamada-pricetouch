@@ -32,6 +32,11 @@
         font-size: 3rem;
         color: $color_green;
     }
+
+    .stock-status {
+        white-space: nowrap;
+        margin-left: 8px;
+    }
 }
 
 .card-favorit{
