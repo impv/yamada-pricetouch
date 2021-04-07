@@ -65,7 +65,7 @@
             background: no-repeat center url("../img/icon-cart-w.svg");
         }
         &.empty{
-            background-color: $color_red;
+            background: darkorange;
             color: $color_white;
             &:before{
                 background: no-repeat center url("../img/icon-cart-w.svg");
