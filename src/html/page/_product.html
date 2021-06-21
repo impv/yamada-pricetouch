@@ -30,7 +30,71 @@
 <section class="section">
     <h1 class="page-title">紹介動画</h1>
     <div class="video">
-        <video preload="metadata" id="eq-1249-3135-0-93921" crossorigin="Anonymous" style="position: absolute; width: 100%; height: 100%; display: block;" src="blob:http://pi-chiku-park.com/65fff7e8-5c48-4275-8279-d2cb3c23dad0"></video>
+        <script type="text/javascript" charset="UTF-8" src="https://ssl-cache.stream.ne.jp/www50/eqa874eebt/jmc_pub/jmc_swf/player/t3/obj.js"></script>
+        <script type="text/javascript">
+        var aqObject = aqObject || {
+            _q: [],
+            tag: function() { this._q.push(arguments); },
+            jsload: function(src) {
+                var a, s;
+                if ((a = document.createElement("script"))) {
+                    a.type = "text/javascript";
+                    a.async = true;
+                    a.src = ("https:" == document.location.protocol ? "https://" : "http://") + src;
+                    s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(a, s);
+                }
+            }
+        };
+        aqObject.aqid = "YQRPV2PUEK3VKGQP76KA";
+        aqObject.jsload("t10.aqtracker.com/asp/aq_tag_aos.js");
+
+        var intFixMetaId = 3135;
+        var strMetaInfo = "&MetaId=" + intFixMetaId;
+            
+        var AQ_player = jstream_t3.PlayerFactoryOBJ.create({
+            b:"eqa874eebt.eq.webcdn.stream.ne.jp/www50/eqa874eebt/jmc_pub/jmc_swf/player/",
+            c:"MTI0OQ==",
+            m:3135,
+            s:{
+                hp:360,
+                ip:"on",
+                sn:"",
+                ti:"off",
+                wp:640
+            }
+        });
+
+        AQ_player.accessor.progressRate = 0.2;
+        var pgrRate = AQ_player.accessor.progressRate;
+        AQ_player.accessor.addEventListener("progress", function (e) {
+            aqObject.tag("tag_cat", "page_type=EqPlayer" + strMetaInfo + "&event=progress&duration="+ AQ_player.accessor.getCurrentTime());
+        })
+
+        AQ_player.accessor.addEventListener("change_state", changeStatus);
+        function changeStatus(e) {
+
+            var playerState = AQ_player.accessor.state;
+            switch (playerState) {
+                case "landing":
+                    aqObject.tag("tag_cat", "page_type=EqPlayer" + strMetaInfo + "&event=landing&totaltime="+ AQ_player.accessor.getTotalTime());
+                    break;
+                case "complete":
+                    aqObject.tag("tag_cat", "page_type=EqPlayer" + strMetaInfo + "&event=complete&duration="+ AQ_player.accessor.getCurrentTime());
+                    break;
+                case "progress":
+                    aqObject.tag("tag_cat", "page_type=EqPlayer" + strMetaInfo + "&event=progress&duration="+ AQ_player.accessor.getCurrentTime());
+                    break;
+                default:
+                    aqObject.tag("tag_cat", "page_type=EqPlayer" + strMetaInfo + "&event=" + playerState);
+                    break;
+            }
+        }
+        </script>
+        <noscript>
+            <div>このコンテンツを見るためにはJavaScriptを有効にしてください。Please enable JavaScript to watch this content.</div>
+        </noscript>
+        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AlaghRrqefw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     </div>
     <h2 class="video-title">動画タイトル（最大22文字程度が好ましい）</h2>
 </section>
