@@ -1,0 +1,17 @@
+.feature-content {
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+        vertical-align: top;
+    }
+}
+
+.feature-content-title {
+    padding: 14px;
+    background: #212735;
+}
+
+.feature-content + .feature-content {
+    margin-top: 28px;
+}

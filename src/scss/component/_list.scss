@@ -3,9 +3,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     > a{
         &:not(:last-child){
             margin-right: 10px;
+        }
+    }
+
+    &.grid {
+        flex-wrap: wrap;
+        margin: -7px;
+        justify-content: flex-start;
+
+        a {
+            margin: 0;
+            margin: 7px;
+            width: calc((100% - 56px) / 4);
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
